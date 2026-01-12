@@ -398,16 +398,20 @@ section {
     }
     
     .card-grid.three-col {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .card-grid.four-col {
         grid-template-columns: repeat(4, 1fr);
     }
 }
 
 @media (min-width: 1024px) {
-    .card-grid.four-col {
-        grid-template-columns: repeat(4, 1fr);
+    .card-grid.three-col {
+        grid-template-columns: repeat(3, 1fr);
     }
     
-    .card-grid.three-col {
+    .card-grid.four-col {
         grid-template-columns: repeat(4, 1fr);
     }
 }
@@ -570,6 +574,10 @@ section {
     display: grid;
     grid-template-columns: 1fr;
     gap: 48px;
+}
+
+.two-column.items-center {
+    align-items: center;
 }
 
 @media (min-width: 768px) {
