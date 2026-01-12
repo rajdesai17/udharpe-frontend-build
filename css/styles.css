@@ -391,7 +391,6 @@ section {
 
 .who-we-are-header {
     text-align: center;
-    margin-bottom: 64px;
 }
 
 .who-we-are-header h1 {
@@ -1954,6 +1953,87 @@ img {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 16px;
+}
+
+/* Affiliate Hero */
+.affiliate-hero {
+    position: relative;
+    background: linear-gradient(120deg, rgba(15,42,68,0.75), rgba(15,42,68,0.55)), url('../image/affiliate_program1.png') center/cover no-repeat;
+    color: var(--white);
+    padding: var(--section-padding-desktop) 0;
+    display: flex;
+    align-items: center;
+}
+
+.affiliate-hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.affiliate-hero-content {
+    position: relative;
+    max-width: 960px;
+    z-index: 1;
+}
+
+.affiliate-hero h1 {
+    color: var(--white);
+    margin: 10px 0 14px;
+    font-size: 38px;
+    line-height: 1.2;
+}
+
+.affiliate-subtitle {
+    color: rgba(255, 255, 255, 0.92);
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+
+.affiliate-body {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 18px;
+    line-height: 1.6;
+    max-width: 780px;
+    margin: 0;
+}
+
+@media (max-width: 767px) {
+    .affiliate-hero {
+        padding: var(--section-padding-mobile) 0;
+    }
+
+    .affiliate-hero h1 {
+        font-size: 32px;
+    }
+
+    .affiliate-body {
+        font-size: 16px;
+    }
+}
+
+/* Mission layout */
+.mission-layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+    align-items: center;
+}
+
+.mission-visual img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 12px;
+    box-shadow: 0 10px 26px rgba(0, 0, 0, 0.08);
+}
+
+@media (min-width: 900px) {
+    .mission-layout {
+        grid-template-columns: 1.1fr 1fr;
+        gap: 40px;
+    }
 }
 
 @media (max-width: 767px) {
