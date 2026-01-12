@@ -1368,14 +1368,28 @@ img {
 }
 
 /* Description Box */
+.description-section-wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 48px;
+    align-items: center;
+    max-width: 100%;
+}
+
+@media (min-width: 968px) {
+    .description-section-wrapper {
+        grid-template-columns: 1fr 1fr;
+        gap: 64px;
+    }
+}
+
 .description-box {
-    max-width: 800px;
-    margin: 0 auto;
+    width: 100%;
     background-color: var(--white);
     padding: 48px;
     border-radius: var(--border-radius);
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
+    text-align: left;
 }
 
 .description-box p {
@@ -1384,115 +1398,328 @@ img {
     line-height: 1.8;
 }
 
+.description-image {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.description-image img {
+    width: 100%;
+    height: auto;
+    max-height: 600px;
+    object-fit: contain;
+    border-radius: var(--border-radius);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
 /* Presence Section */
 .presence-section {
-    background-color: #1c1c1c;
-    color: var(--white);
+    background-color: var(--white);
+    padding: var(--spacing-2xl) 0;
 }
 
-.presence-section h2,
-.presence-section h3,
-.presence-section p {
-    color: var(--white);
+.presence-banner-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: var(--white);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
 }
 
-.presence-wrapper {
+.presence-main-content {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 32px;
-    align-items: center;
+    gap: 40px;
+    align-items: start;
+    margin-bottom: 30px;
 }
 
-@media (min-width: 900px) {
-    .presence-wrapper {
-        grid-template-columns: 1fr 1fr;
-        gap: 48px;
+@media (min-width: 968px) {
+    .presence-main-content {
+        grid-template-columns: 1fr 2fr 1fr;
+        gap: 20px;
+        align-items: center;
     }
 }
 
-.presence-copy {
+.presence-left-section {
+    text-align: center;
+}
+
+.presence-brand-title {
+    margin-bottom: 20px;
+}
+
+.presence-udhar {
+    color: #1e3a8a;
+    font-size: 3.5em;
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-family: 'Georgia', serif;
+}
+
+.presence-pe {
+    color: #22c55e;
+    font-size: 3.5em;
+    font-weight: bold;
+    font-family: 'Georgia', serif;
+}
+
+.presence-bharat {
+    color: #1e3a8a;
+    font-size: 2.8em;
+    font-weight: bold;
+    margin: 10px 0;
+    font-family: 'Georgia', serif;
+}
+
+.presence-ka {
+    color: #1e3a8a;
+    font-size: 2.8em;
+    font-weight: bold;
+    margin: 10px 0;
+    font-family: 'Georgia', serif;
+}
+
+.presence-no-1 {
+    color: #dc2626;
+    font-size: 3.5em;
+    font-weight: bold;
+    margin: 10px 0;
+    font-family: 'Georgia', serif;
+}
+
+.presence-grocery-store {
+    color: #1e3a8a;
+    font-size: 2.5em;
+    font-weight: bold;
+    line-height: 1.2;
+    font-family: 'Georgia', serif;
+}
+
+.presence-target-section {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.presence-target-label {
+    color: #666;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.presence-target-numbers {
     display: flex;
-    flex-direction: column;
-    gap: 16px;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 15px;
+}
+
+.presence-target-item {
+    text-align: center;
+}
+
+.presence-target-value {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #1e3a8a;
+}
+
+.presence-target-label-red {
+    color: #dc2626;
+    font-size: 1.3em;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.presence-divider {
+    width: 2px;
+    height: 60px;
+    background: #333;
 }
 
 .presence-tagline {
-    font-weight: 700;
-    font-size: 20px;
-    letter-spacing: 0.4px;
-}
-
-.presence-headline {
-    font-size: 26px;
-    line-height: 1.5;
-    font-weight: 700;
-}
-
-.presence-targets {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-    margin-top: 8px;
-}
-
-.target-pill {
-    background: rgba(255, 255, 255, 0.08);
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    color: var(--white);
-    padding: 10px 16px;
-    border-radius: 999px;
+    color: #1e3a8a;
+    font-size: 1.1em;
     font-weight: 600;
-    font-size: 14px;
 }
 
-.target-pill.accent {
-    background: var(--cta-orange);
-    border-color: var(--cta-orange);
-    color: var(--white);
+.presence-center-section {
+    position: relative;
+    text-align: center;
 }
 
-.mission-bars {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    margin-top: 12px;
-}
-
-.mission-bar {
-    display: grid;
-    grid-template-columns: 60px 1fr;
-    align-items: center;
-    gap: 12px;
-    color: var(--white);
-}
-
-.mission-bar span {
-    font-weight: 700;
-}
-
-.mission-bar .bar {
-    background: rgba(255, 255, 255, 0.08);
-    border-radius: 6px;
-    overflow: hidden;
-    height: 10px;
+.presence-india-map {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
     position: relative;
 }
 
-.mission-bar .bar span {
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    background: linear-gradient(90deg, var(--accent-green), var(--cta-orange));
-    border-radius: 6px;
+.presence-map-img {
+    width: 100%;
+    height: auto;
+    filter: drop-shadow(0 2px 10px rgba(0, 0, 0, 0.2));
 }
 
-.presence-visual img {
-    width: 100%;
-    max-width: 520px;
-    display: block;
+.presence-right-section {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.presence-up-logo {
+    width: 180px;
+    height: auto;
     margin: 0 auto;
-    filter: drop-shadow(0 8px 20px rgba(0,0,0,0.35));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.presence-logo-u {
+    font-family: Arial, sans-serif;
+    font-size: 70px;
+    font-weight: bold;
+    color: #1e3a8a;
+}
+
+.presence-logo-p {
+    font-family: Arial, sans-serif;
+    font-size: 70px;
+    font-weight: bold;
+    color: #22c55e;
+}
+
+.presence-mission-chart {
+    width: 100%;
+    max-width: 350px;
+    margin: 0 auto;
+}
+
+.presence-chart-bars {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 15px;
+    height: 200px;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.presence-bar {
+    width: 60px;
+    background: #22c55e;
+    border-radius: 5px 5px 0 0;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.presence-bar:hover {
+    transform: translateY(-5px);
+}
+
+.presence-bar-1 { height: 35%; }
+.presence-bar-2 { height: 50%; }
+.presence-bar-3 { height: 65%; }
+.presence-bar-4 { height: 80%; }
+.presence-bar-5 { height: 100%; }
+
+.presence-bar-label {
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.9em;
+    font-weight: bold;
+    color: #333;
+    white-space: nowrap;
+    width: 100%;
+    text-align: center;
+}
+
+.presence-mission-banner {
+    background: #1e3a8a;
+    color: var(--white);
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.presence-franchise-banner {
+    background: linear-gradient(90deg, #dc2626 0%, #1e3a8a 50%, #dc2626 100%);
+    color: var(--white);
+    padding: 20px;
+    text-align: center;
+    font-size: 2em;
+    font-weight: bold;
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+}
+
+.presence-franchise-banner::before,
+.presence-franchise-banner::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-style: solid;
+}
+
+.presence-franchise-banner::before {
+    left: 0;
+    border-width: 30px 30px 30px 0;
+    border-color: transparent #dc2626 transparent transparent;
+}
+
+.presence-franchise-banner::after {
+    right: 0;
+    border-width: 30px 0 30px 30px;
+    border-color: transparent transparent transparent #dc2626;
+}
+
+@media (max-width: 968px) {
+    .presence-udhar, .presence-pe {
+        font-size: 2.5em;
+    }
+
+    .presence-bharat, .presence-ka {
+        font-size: 2em;
+    }
+
+    .presence-no-1 {
+        font-size: 2.8em;
+    }
+
+    .presence-grocery-store {
+        font-size: 1.8em;
+    }
+
+    .presence-target-value {
+        font-size: 2em;
+    }
+
+    .presence-franchise-banner {
+        font-size: 1.5em;
+    }
+
+    .presence-mission-banner {
+        font-size: 1.5em;
+    }
 }
 
 /* FOFO Card Styles */
