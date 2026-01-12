@@ -938,10 +938,18 @@ footer {
 .mt-2 { margin-top: var(--spacing-xl); }
 .mb-2 { margin-bottom: var(--spacing-xl); }
 
-/* Image Placeholders */
+/* Image Styles */
 img {
     max-width: 100%;
     height: auto;
+}
+
+.image-section {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin-bottom: var(--spacing-2xl);
+    border-radius: var(--border-radius);
 }
 
 .image-placeholder {
