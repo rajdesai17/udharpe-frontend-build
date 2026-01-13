@@ -638,15 +638,6 @@ section {
         grid-template-columns: repeat(3, 1fr);
     }
     
-    /* Center the last 2 cards in a three-col grid */
-    .card-grid.three-col .card:nth-last-child(2) {
-        grid-column: 2;
-    }
-    
-    .card-grid.three-col .card:last-child {
-        grid-column: 3;
-    }
-
     .card-grid.four-col {
         grid-template-columns: repeat(4, 1fr);
     }
@@ -658,12 +649,16 @@ section {
     }
     
     /* Center the last 2 cards in a three-col grid */
-    .card-grid.three-col .card:nth-last-child(2) {
-        grid-column: 2;
+    .card-grid.three-col > .card:nth-last-child(2),
+    .card-grid.three-col > .card:nth-child(7) {
+        grid-column: 2 / 3 !important;
+        grid-row: auto;
     }
     
-    .card-grid.three-col .card:last-child {
-        grid-column: 3;
+    .card-grid.three-col > .card:last-child,
+    .card-grid.three-col > .card:nth-child(8) {
+        grid-column: 3 / 4 !important;
+        grid-row: auto;
     }
     
     .card-grid.four-col {
@@ -953,8 +948,9 @@ footer {
 
 @media (min-width: 768px) {
     .footer-content {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1.5fr 1fr 1fr;
         padding: 0 var(--section-padding-desktop);
+        gap: 48px;
     }
 }
 
@@ -1024,6 +1020,60 @@ footer {
 
 .footer-links ul li a:hover {
     color: var(--accent-green);
+}
+
+.footer-download {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-download h4 {
+    color: var(--text-dark);
+    font-size: var(--font-size-h4);
+    font-weight: var(--font-weight-semibold);
+    margin-bottom: var(--spacing-md);
+    position: relative;
+    display: inline-block;
+    padding-bottom: 8px;
+}
+
+.footer-download h4::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background-color: var(--cta-orange);
+}
+
+.footer-store-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: flex-start;
+}
+
+.footer-store-buttons .btn-store {
+    display: inline-block;
+    cursor: pointer;
+    transition: transform 0.2s, opacity 0.2s;
+    border-radius: 6px;
+    overflow: hidden;
+    width: 155px;
+    height: auto;
+}
+
+.footer-store-buttons .btn-store:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
+
+.footer-store-buttons .btn-store img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
 }
 
 /* Page Title Bar */
