@@ -253,6 +253,7 @@ header {
 
 .logo span {
     color: var(--accent-green);
+    margin-left: 0;
 }
 
 nav {
@@ -645,20 +646,21 @@ section {
 
 @media (min-width: 1024px) {
     .card-grid.three-col {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(6, 1fr);
     }
     
-    /* Center the last 2 cards in a three-col grid */
-    .card-grid.three-col > .card:nth-last-child(2),
-    .card-grid.three-col > .card:nth-child(7) {
-        grid-column: 2 / 3 !important;
-        grid-row: auto;
+    /* Make regular cards span 2 columns each (3 cards per row) */
+    .card-grid.three-col > .card {
+        grid-column: span 2;
     }
     
-    .card-grid.three-col > .card:last-child,
-    .card-grid.three-col > .card:nth-child(8) {
-        grid-column: 3 / 4 !important;
-        grid-row: auto;
+    /* Center the last 2 cards - start from column 2, each spans 2 columns */
+    .card-grid.three-col > .card:nth-child(7):nth-last-child(2) {
+        grid-column: 2 / 4;
+    }
+    
+    .card-grid.three-col > .card:nth-child(8):last-child {
+        grid-column: 4 / 6;
     }
     
     .card-grid.four-col {
@@ -967,6 +969,7 @@ footer {
 
 .footer-logo span {
     color: var(--accent-green);
+    margin-left: 0;
 }
 
 .footer-logo-up {
