@@ -646,23 +646,17 @@ section {
 
 @media (min-width: 1024px) {
     .card-grid.three-col {
-        grid-template-columns: repeat(6, 1fr);
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 24px;
     }
-    
-    /* Make regular cards span 2 columns each (3 cards per row) */
+
     .card-grid.three-col > .card {
-        grid-column: span 2;
+        flex: 1 1 calc((100% - (24px * 2)) / 3);
+        max-width: calc((100% - (24px * 2)) / 3);
     }
-    
-    /* Center the last 2 cards - start from column 2, each spans 2 columns */
-    .card-grid.three-col > .card:nth-child(7):nth-last-child(2) {
-        grid-column: 2 / 4;
-    }
-    
-    .card-grid.three-col > .card:nth-child(8):last-child {
-        grid-column: 4 / 6;
-    }
-    
+
     .card-grid.four-col {
         grid-template-columns: repeat(4, 1fr);
     }
