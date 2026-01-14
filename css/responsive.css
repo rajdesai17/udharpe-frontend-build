@@ -1,0 +1,309 @@
+/* ============================================
+   Consolidated Media Queries
+   ============================================ */
+
+/* Tablet and Mobile (max-width: 767px) */
+@media (max-width: 767px) {
+    /* Typography Adjustments */
+    :root {
+        --font-size-h1: 32px;
+        --font-size-h2: 28px;
+        --font-size-h3: 20px;
+        --font-size-h4: 18px;
+        --font-size-h5: 16px;
+        --font-size-h6: 14px;
+        --font-size-base: 15px;
+        --font-size-large: 16px;
+    }
+    
+    /* Hero Sections */
+    .hero {
+        padding: var(--section-padding-mobile);
+    }
+    
+    .hero h1 {
+        font-size: 32px;
+    }
+    
+    .hero-content {
+        padding: 0 16px;
+    }
+    
+    /* Affiliate Hero */
+    .affiliate-hero {
+        padding: var(--section-padding-mobile) 0;
+    }
+    
+    .affiliate-hero h1 {
+        font-size: 32px;
+    }
+    
+    .affiliate-body {
+        font-size: 16px;
+    }
+    
+    /* Presence Section */
+    .presence-udhar, .presence-pe {
+        font-size: 2.5em;
+    }
+    
+    .presence-bharat, .presence-ka {
+        font-size: 2em;
+    }
+    
+    .presence-no-1 {
+        font-size: 2.8em;
+    }
+    
+    .presence-grocery-store {
+        font-size: 1.8em;
+    }
+    
+    .presence-target-value {
+        font-size: 2em;
+    }
+    
+    .presence-franchise-banner {
+        font-size: 1.5em;
+    }
+    
+    .presence-mission-banner {
+        font-size: 1.5em;
+    }
+    
+    /* Grids */
+    .advantages-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Desktop and Tablet (min-width: 768px) */
+@media (min-width: 768px) {
+    /* Container */
+    .container {
+        padding: 0 var(--section-padding-desktop);
+    }
+    
+    /* Header */
+    .header-content {
+        padding: 16px var(--section-padding-desktop);
+    }
+    
+    /* Sections */
+    section {
+        padding: var(--section-padding-desktop) 0;
+    }
+    
+    .section-white {
+        padding: var(--spacing-xl) 0;
+    }
+    
+    /* Hero */
+    .hero h1 {
+        font-size: 48px;
+    }
+    
+    /* Who We Are */
+    .who-we-are-header h1 {
+        font-size: 48px;
+    }
+    
+    .who-we-are-features {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .who-we-are-stats {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 48px;
+    }
+    
+    .stat-value {
+        font-size: 48px;
+    }
+    
+    /* Mission Section */
+    .mission-section h2 {
+        font-size: var(--font-size-h1);
+        margin-bottom: var(--spacing-lg);
+    }
+    
+    /* Section Titles */
+    .section-title h2 {
+        font-size: var(--font-size-h1);
+    }
+    
+    /* Metrics */
+    .metrics-heading {
+        font-size: 24px;
+        margin-bottom: 40px;
+    }
+    
+    /* Offer Grid */
+    .offer-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 16px;
+    }
+    
+    /* Card Grids */
+    .card-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .card-grid .card:last-child:nth-child(odd) {
+        grid-column: 1 / -1;
+        justify-self: center;
+        max-width: calc(50% - 12px);
+    }
+    
+    .card-grid.three-col {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .card-grid.four-col {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    
+    /* Two Column Layout */
+    .two-column {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    /* Process Steps */
+    .process-steps {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    /* Certifications */
+    .certifications-grid {
+        grid-template-columns: repeat(5, 1fr);
+    }
+    
+    /* FOFO Details */
+    .fofo-details {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    /* Footer */
+    .footer-strip-content {
+        grid-template-columns: repeat(3, 1fr);
+        padding: 0 var(--section-padding-desktop);
+    }
+    
+    .footer-strip-item {
+        text-align: left;
+        align-items: flex-start;
+    }
+    
+    .footer-content {
+        grid-template-columns: 1.5fr 1fr 1fr;
+        padding: 0 var(--section-padding-desktop);
+        gap: 48px;
+    }
+    
+    /* Legal Content */
+    .legal-content {
+        padding: var(--section-padding-desktop) 0;
+    }
+    
+    /* CTA Section */
+    .cta-content {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 var(--section-padding-desktop);
+    }
+    
+    /* Franchise Description */
+    .description-section-wrapper {
+        padding: var(--spacing-2xl) var(--section-padding-desktop);
+    }
+    
+    .description-box {
+        padding: 80px 64px;
+    }
+    
+    .description-title {
+        font-size: 48px;
+        margin-bottom: var(--spacing-2xl);
+    }
+    
+    .description-box p {
+        font-size: 19px;
+        line-height: 1.9;
+        margin-bottom: var(--spacing-xl);
+    }
+    
+    .download-brochure-btn {
+        padding: 16px 48px;
+        font-size: 20px;
+    }
+    
+    /* Presence Map */
+    .presence-map-img {
+        width: 700px;
+    }
+}
+
+/* Large Tablets and Small Desktops (min-width: 900px) */
+@media (min-width: 900px) {
+    .mission-layout {
+        grid-template-columns: 1.1fr 1fr;
+        gap: 40px;
+    }
+}
+
+/* Desktops (min-width: 968px) */
+@media (min-width: 968px) {
+    .presence-main-content {
+        grid-template-columns: 1fr 2fr 1fr;
+        gap: 20px;
+        align-items: center;
+    }
+    
+    .presence-map-img {
+        width: 850px;
+    }
+}
+
+/* Large Desktops (min-width: 1024px) */
+@media (min-width: 1024px) {
+    .card-grid.three-col {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 24px;
+    }
+    
+    .card-grid.three-col > .card {
+        flex: 1 1 calc((100% - (24px * 2)) / 3);
+        max-width: calc((100% - (24px * 2)) / 3);
+    }
+    
+    .card-grid.four-col {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    
+    .process-steps {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* Extra Large Desktops (min-width: 1200px) */
+@media (min-width: 1200px) {
+    .description-box {
+        padding: 96px 80px;
+        max-width: 1100px;
+    }
+    
+    .description-title {
+        font-size: 52px;
+    }
+    
+    .description-box p {
+        font-size: 20px;
+    }
+    
+    .presence-map-img {
+        width: 1000px;
+    }
+}

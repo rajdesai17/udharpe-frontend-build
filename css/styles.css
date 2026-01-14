@@ -1,5 +1,13 @@
 /* ============================================
    UDHARPE - Global Styles
+   ============================================ 
+   
+   This file contains base styles and components.
+   For modular organization:
+   - Mobile navigation: mobile-navigation.css
+   - Form validation styles: forms.css
+   - Utilities: utilities.css
+   - Responsive breakpoints: responsive.css
    ============================================ */
 
 /* Reset & Base Styles */
@@ -181,31 +189,11 @@ strong {
     color: var(--text-dark);
 }
 
-/* Responsive Typography */
-@media (max-width: 767px) {
-    :root {
-        --font-size-h1: 32px;
-        --font-size-h2: 28px;
-        --font-size-h3: 20px;
-        --font-size-h4: 18px;
-        --font-size-h5: 16px;
-        --font-size-h6: 14px;
-        --font-size-base: 15px;
-        --font-size-large: 16px;
-    }
-}
-
 /* Container */
 .container {
     max-width: var(--max-width);
     margin: 0 auto;
     padding: 0 var(--section-padding-mobile);
-}
-
-@media (min-width: 768px) {
-    .container {
-        padding: 0 var(--section-padding-desktop);
-    }
 }
 
 /* Header */
@@ -226,12 +214,6 @@ header {
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-}
-
-@media (min-width: 768px) {
-    .header-content {
-        padding: 16px var(--section-padding-desktop);
-    }
 }
 
 .logo {
@@ -294,21 +276,9 @@ section {
     padding: var(--section-padding-mobile) 0;
 }
 
-@media (min-width: 768px) {
-    section {
-        padding: var(--section-padding-desktop) 0;
-    }
-}
-
 .section-white {
     background-color: var(--white);
     padding: var(--spacing-lg) 0;
-}
-
-@media (min-width: 768px) {
-    .section-white {
-        padding: var(--spacing-xl) 0;
-    }
 }
 
 .section-light {
@@ -333,12 +303,6 @@ section {
 .section-title h2 {
     font-size: var(--font-size-h2);
     margin-bottom: var(--spacing-md);
-}
-
-@media (min-width: 768px) {
-    .section-title h2 {
-        font-size: var(--font-size-h1);
-    }
 }
 
 /* Hero Section */
@@ -378,12 +342,6 @@ section {
     color: var(--white);
     font-size: var(--font-size-h1);
     margin-bottom: var(--spacing-lg);
-}
-
-@media (min-width: 768px) {
-    .hero h1 {
-        font-size: 48px;
-    }
 }
 
 .hero p {
