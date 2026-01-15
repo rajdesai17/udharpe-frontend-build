@@ -3,6 +3,11 @@ document.addEventListener('DOMContentLoaded', function() {
     const header = document.querySelector('header');
     const nav = document.querySelector('.nav-links');
     
+    // Exit if required elements don't exist
+    if (!header || !nav) {
+        return;
+    }
+    
     // Create hamburger menu button
     const hamburger = document.createElement('button');
     hamburger.className = 'hamburger-menu';
@@ -17,7 +22,11 @@ document.addEventListener('DOMContentLoaded', function() {
     // Insert hamburger before nav
     const headerContent = document.querySelector('.header-content');
     const navButtons = document.querySelector('.nav-buttons');
-    headerContent.insertBefore(hamburger, navButtons);
+    if (headerContent && navButtons) {
+        headerContent.insertBefore(hamburger, navButtons);
+    } else if (headerContent) {
+        headerContent.appendChild(hamburger);
+    }
     
     // Toggle menu
     hamburger.addEventListener('click', function() {

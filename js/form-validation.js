@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
     forms.forEach(form => {
         form.addEventListener('submit', function(e) {
             let isValid = true;
-            const formMessage = document.getElementById('form-message');
+            const formMessage = form.querySelector('#form-message') || document.getElementById('form-message');
             
             // Clear previous error messages
             const errorMessages = form.querySelectorAll('.error-message');
@@ -43,13 +43,13 @@ document.addEventListener('DOMContentLoaded', function() {
             
             // Validate specific fields by name
             const nameField = form.querySelector('[name="name"], [name="fullName"]');
-            if (nameField && nameField.value.trim().length < 2) {
+            if (nameField && nameField.value.trim() && nameField.value.trim().length < 2) {
                 isValid = false;
                 showError(nameField, 'Name must be at least 2 characters');
             }
             
             const messageField = form.querySelector('[name="message"]');
-            if (messageField && messageField.value.trim().length < 10) {
+            if (messageField && messageField.value.trim() && messageField.value.trim().length < 10) {
                 isValid = false;
                 showError(messageField, 'Message must be at least 10 characters');
             }
@@ -71,10 +71,8 @@ document.addEventListener('DOMContentLoaded', function() {
                     firstError.focus();
                 }
             } else {
-                // Clear success message if validation passes
-                if (formMessage) {
-                    formMessage.style.display = 'none';
-                }
+                // Prevent submission (no action configured)
+                e.preventDefault();
             }
         });
         
